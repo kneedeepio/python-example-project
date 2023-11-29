@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+### IMPORTS ###
 import io
 import os
 import sys
@@ -7,9 +8,11 @@ import sys
 from pylint.lint import Run
 from pylint.reporters.text import TextReporter
 
+### GLOBALS ###
 # Add directories to exclude to this list.
 EXCLUDE_DIRS = ['venv']
 
+### FUNCTIONS ###
 def get_python_modules():
     # Get a list of all python files in the project
     print('Compiling list of modules...')
@@ -37,6 +40,9 @@ def get_result_value(result_string):
             return tmp_result
     return None
 
+### CLASSES ###
+
+### MAIN ###
 def main():
     # Run PyLint on all of the modules, keeping the output
     results = {}

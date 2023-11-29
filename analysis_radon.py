@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
+### IMPORTS ###
 import os
 import sys
 
 from radon.complexity import cc_rank, cc_visit
 from radon.visitors import Function, Class
 
+### GLOBALS ###
 # Add directories to exclude to this list.
 EXCLUDE_DIRS = ['venv']
 
+### FUNCTIONS ###
 def get_python_modules():
     # Get a list of all python files in the project
     print('Compiling list of modules...')
@@ -35,6 +38,9 @@ def add_to_report(scores, chunk, template):
         for method in chunk.methods:
             add_to_report(scores, method, template)
 
+### CLASSES ###
+
+### MAIN ###
 def main():
     # Analyze each module with Radon
     print('Analyzing modules with Radon...')
